@@ -1,0 +1,56 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+#score {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#result {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px); /* Chia thành 4 cột */
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Ảnh thẻ ban đầu ẩn */
+}
+
+.card.flipped img {
+    display: block; /* Hiển thị ảnh khi thẻ được lật */
+}
+
+.card.flipped {
+    background-color: #fff;
+}
